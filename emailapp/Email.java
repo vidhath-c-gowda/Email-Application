@@ -37,7 +37,7 @@ public class Email
 	//Ask for the department
 	private String setDepartment() 		
 	{
-		System.out.println("Department Codes\n1 for Sales\n2 for Development\n3 for Accounting\n4 for None\nEnter department Code:");
+		System.out.println("Name is: " + firstName + "\nDepartment Codes\n1 for Sales\n2 for Development\n3 for Accounting\n4 for None\nEnter department Code:");
 		Scanner in = new Scanner(System.in);
 		int depChoice = in.nextInt();
 		if (depChoice == 1)
@@ -72,9 +72,43 @@ public class Email
 	}
 	
 	//Set mailbox capacity
+	public void setMailboxCapacity(int capacity)
+	{
+		this.mailboxCapacity = capacity;
+	}
 	
-	//Set alternate email\
+	//Set alternate email
+	public void setAlternateEmail(String altEmail)
+	{
+		this.alternateEmail = altEmail;
+	}
 	
 	//Change the password
+	public void changePassword(String password)
+	{
+		this.password = password;
+	}
+	
+	
+	public int getMailboxCapacity()
+	{
+		return mailboxCapacity;
+	}
+	public String getAlternateEmail()
+	{
+		return alternateEmail;
+	}
+	public String getPassword()
+	{
+		return password;
+	}
+	
+	public String showInfo()
+	{
+		return "Name: " + firstName + " " 	+ lastName +
+				"\nCompany Email: " + email +
+				"\nMailbox Capacity: " + mailboxCapacity + "mb";
+	}  
+	
 }
 
